@@ -1,7 +1,7 @@
 {
     "author": "kai zhu <kaizhu256@gmail.com>",
     "buildNpmdoc": "cmake-js",
-    "description": "api documentation for [cmake-js (v3.4.1)](https://github.com/unbornchikken/cmake-js#readme) [![npm package](https://img.shields.io/npm/v/npmdoc-cmake-js.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-cmake-js) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-cmake-js.svg)](https://travis-ci.org/npmdoc/node-npmdoc-cmake-js)",
+    "description": "#### api documentation for  [cmake-js (v3.4.1)](https://github.com/unbornchikken/cmake-js#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-cmake-js.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-cmake-js) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-cmake-js.svg)](https://travis-ci.org/npmdoc/node-npmdoc-cmake-js)",
     "devDependencies": {
         "cmake-js": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
@@ -36,5 +36,5 @@
         "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
         "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
-    "version": "0.0.1"
+    "version": "0.0.2"
 }
