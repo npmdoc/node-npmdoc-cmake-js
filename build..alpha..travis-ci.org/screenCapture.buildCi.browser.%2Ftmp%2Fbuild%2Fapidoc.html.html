@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/unbornchikken/cmake-js#readme"
-
-    >cmake-js (v3.4.1)</a>
+    <a href="https://github.com/unbornchikken/cmake-js#readme">cmake-js (v3.4.1)</a>
 </h1>
 <h4>CMake.js - a Node.js/io.js native addon build tool</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.cmake-js">module cmake-js</a><ol>
 
@@ -1947,16 +1940,16 @@
     let appConfig = appCMakeJSConfig(this.options.directory, this.log);
     if (_.isPlainObject(appConfig)) {
         if (_.keys(appConfig).length) {
-            this.log.verbose(&#x22;CFG&#x22;, &#x22;Applying CMake.js config from root package.json:&#x22;);
-            this.log.verbose(&#x22;CFG&#x22;, JSON.stringify(appConfig));
-            // Applying applications&#x27;s config, if there is no explicit runtime related options specified
+            this.log.verbose("CFG", "Applying CMake.js config from root package.json:");
+            this.log.verbose("CFG", JSON.stringify(appConfig));
+            // Applying applications's config, if there is no explicit runtime related options specified
             this.options.runtime = this.options.runtime || appConfig.runtime;
             this.options.runtimeVersion = this.options.runtimeVersion || appConfig.runtimeVersion;
             this.options.arch = this.options.arch || appConfig.arch;
         }
     }
-    this.log.verbose(&#x22;CFG&#x22;, &#x22;Build system options:&#x22;);
-    this.log.verbose(&#x22;CFG&#x22;, JSON.stringify(this.options));
+    this.log.verbose("CFG", "Build system options:");
+    this.log.verbose("CFG", JSON.stringify(this.options));
     this.cmake = new CMake(this.options);
     this.dist = new Dist(this.options);
     this.toolset = new Toolset(this.options);
@@ -2014,11 +2007,11 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">BuildSystem.prototype._showError = function (e) {
-    if (this.log.level === &#x22;verbose&#x22; || this.log.level === &#x22;silly&#x22;) {
-        this.log.error(&#x22;OMG&#x22;, e.stack);
+    if (this.log.level === "verbose" || this.log.level === "silly") {
+        this.log.error("OMG", e.stack);
     }
     else {
-        this.log.error(&#x22;OMG&#x22;, e.message);
+        this.log.error("OMG", e.message);
     }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -2034,7 +2027,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">BuildSystem.prototype.build = function () {
-    return this._invokeCMake(&#x22;build&#x22;);
+    return this._invokeCMake("build");
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -2049,7 +2042,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">BuildSystem.prototype.clean = function () {
-    return this._invokeCMake(&#x22;clean&#x22;);
+    return this._invokeCMake("clean");
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -2064,7 +2057,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">BuildSystem.prototype.compile = function () {
-    return this._invokeCMake(&#x22;compile&#x22;);
+    return this._invokeCMake("compile");
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -2079,7 +2072,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">BuildSystem.prototype.configure = function () {
-    return this._invokeCMake(&#x22;configure&#x22;);
+    return this._invokeCMake("configure");
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -2094,7 +2087,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">BuildSystem.prototype.getBuildCommand = function () {
-    return this._invokeCMake(&#x22;getBuildCommand&#x22;);
+    return this._invokeCMake("getBuildCommand");
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -2109,7 +2102,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">BuildSystem.prototype.getCleanCommand = function () {
-    return this._invokeCMake(&#x22;getCleanCommand&#x22;);
+    return this._invokeCMake("getCleanCommand");
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -2124,7 +2117,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">BuildSystem.prototype.getConfigureCommand = function () {
-    return this._invokeCMake(&#x22;getConfigureCommand&#x22;);
+    return this._invokeCMake("getConfigureCommand");
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -2154,7 +2147,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">BuildSystem.prototype.rebuild = function () {
-    return this._invokeCMake(&#x22;rebuild&#x22;);
+    return this._invokeCMake("rebuild");
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -2169,7 +2162,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">BuildSystem.prototype.reconfigure = function () {
-    return this._invokeCMake(&#x22;reconfigure&#x22;);
+    return this._invokeCMake("reconfigure");
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -2185,7 +2178,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function CMLog(options) {
     this.options = options || {};
-    this.debug = require(&#x22;debug&#x22;)(this.options.logName || &#x22;cmake-js&#x22;);
+    this.debug = require("debug")(this.options.logName || "cmake-js");
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -2201,7 +2194,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CMLog.prototype.error = function (cat, msg) {
     if (this.options.noLog) {
-        this.debug(cat + &#x22;: &#x22; + msg);
+        this.debug(cat + ": " + msg);
     }
     else {
         log.error(cat, msg);
@@ -2221,7 +2214,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CMLog.prototype.http = function (cat, msg) {
     if (this.options.noLog) {
-        this.debug(cat + &#x22;: &#x22; + msg);
+        this.debug(cat + ": " + msg);
     }
     else {
         log.http(cat, msg);
@@ -2241,7 +2234,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CMLog.prototype.info = function (cat, msg) {
     if (this.options.noLog) {
-        this.debug(cat + &#x22;: &#x22; + msg);
+        this.debug(cat + ": " + msg);
     }
     else {
         log.info(cat, msg);
@@ -2261,7 +2254,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CMLog.prototype.silly = function (cat, msg) {
     if (this.options.noLog) {
-        this.debug(cat + &#x22;: &#x22; + msg);
+        this.debug(cat + ": " + msg);
     }
     else {
         log.silly(cat, msg);
@@ -2281,7 +2274,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CMLog.prototype.verbose = function (cat, msg) {
     if (this.options.noLog) {
-        this.debug(cat + &#x22;: &#x22; + msg);
+        this.debug(cat + ": " + msg);
     }
     else {
         log.verbose(cat, msg);
@@ -2301,7 +2294,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CMLog.prototype.warn = function (cat, msg) {
     if (this.options.noLog) {
-        this.debug(cat + &#x22;: &#x22; + msg);
+        this.debug(cat + ": " + msg);
     }
     else {
         log.warn(cat, msg);
@@ -2324,8 +2317,8 @@
     this.log = new CMLog(this.options);
     this.dist = new Dist(this.options);
     this.projectRoot = path.resolve(this.options.directory || process.cwd());
-    this.workDir = this.options.out || path.join(this.projectRoot, &#x22;build&#x22;);
-    this.config = this.options.debug ? &#x22;Debug&#x22; : &#x22;Release&#x22;;
+    this.workDir = this.options.out || path.join(this.projectRoot, "build");
+    this.config = this.options.debug ? "Debug" : "Release";
     this.buildDir = path.join(this.workDir, this.config);
     this._isAvailable = null;
     this.targetOptions = new TargetOptions(this.options);
@@ -2373,7 +2366,7 @@
             return !stat.isDirectory();
         }
         else {
-            which.sync(&#x22;cmake&#x22;);
+            which.sync("cmake");
             return true;
         }
     }
@@ -2395,7 +2388,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CMake.prototype._run = function (command) {
-    this.log.info(&#x22;RUN&#x22;, command);
+    this.log.info("RUN", command);
     return processHelpers.run(command, {silent: this.silent});
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -2433,7 +2426,7 @@
     <li>description and source-code<pre class="apidocCodePre">CMake.prototype.clean = function () {
     this.verifyIfAvailable();
 
-    this.log.info(&#x22;CMD&#x22;, &#x22;CLEAN&#x22;);
+    this.log.info("CMD", "CLEAN");
     return this._run(this.getCleanCommand());
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -2509,7 +2502,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CMake.prototype.getBuildCommand = function () {
-    return Bluebird.resolve(this.path + &#x22; --build \&#x22;&#x22; + this.workDir + &#x22;\&#x22; --config &#x22; + this.config);
+    return Bluebird.resolve(this.path + " --build \"" + this.workDir + "\" --config " + this.config);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -2524,7 +2517,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CMake.prototype.getCleanCommand = function () {
-    return this.path + &#x22; -E remove_directory \&#x22;&#x22; + this.workDir + &#x22;\&#x22;&#x22;;
+    return this.path + " -E remove_directory \"" + this.workDir + "\"";
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -2615,8 +2608,8 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">CMake.prototype.verifyIfAvailable = function () {
     if (!this.isAvailable) {
-        throw new Error(&#x22;CMake executable is not found. Please use your system&#x27;s package manager to install it, or you can get installers
- from there: http://cmake.org.&#x22;);
+        throw new Error("CMake executable is not found. Please use your system's package manager to install it, or you can get installers
+ from there: http://cmake.org.");
     }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -2810,18 +2803,18 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">Toolset.prototype._setupGNUStd = function (install) {
     if (this.options.std) {
-        if (this.options.std !== &#x22;c++98&#x22;) {
+        if (this.options.std !== "c++98") {
             if (install) {
-                this.log.info(&#x22;TOOL&#x22;, `Using ${this.options.std} compiler standard.`);
+                this.log.info("TOOL", `Using ${this.options.std} compiler standard.`);
             }
-            this.compilerFlags.push(&#x22;-std=&#x22; + this.options.std);
+            this.compilerFlags.push("-std=" + this.options.std);
         }
     }
     else {
         if (install) {
-            this.log.info(&#x22;TOOL&#x22;, &#x22;Using c++11 compiler standard.&#x22;);
+            this.log.info("TOOL", "Using c++11 compiler standard.");
         }
-        this.compilerFlags.push(&#x22;-std=c++11&#x22;);
+        this.compilerFlags.push("-std=c++11");
     }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -2858,82 +2851,82 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">Toolset.prototype.initializePosix = function (install) {
     // 1: Compiler
-    if (!environment.isGPPAvailable &#x26;&#x26; !environment.isClangAvailable) {
+    if (!environment.isGPPAvailable &amp;&amp; !environment.isClangAvailable) {
         if (environment.isOSX) {
-            throw new Error(&#x22;C++ Compiler toolset is not available. Install Xcode Commandline Tools from Apple Dev Center, or install
- Clang with homebrew by invoking: &#x27;brew install llvm --with-clang --with-asan&#x27;.&#x22;);
+            throw new Error("C++ Compiler toolset is not available. Install Xcode Commandline Tools from Apple Dev Center, or install
+ Clang with homebrew by invoking: 'brew install llvm --with-clang --with-asan'.");
         }
         else {
-            throw new Error(&#x22;C++ Compiler toolset is not available. Install proper compiler toolset with your package manager, eg
-. &#x27;sudo apt-get install g++&#x27;.&#x22;);
+            throw new Error("C++ Compiler toolset is not available. Install proper compiler toolset with your package manager, eg
+. 'sudo apt-get install g++'.");
         }
     }
 
-    if (this.options.preferClang &#x26;&#x26; environment.isClangAvailable) {
+    if (this.options.preferClang &amp;&amp; environment.isClangAvailable) {
         if (install) {
-            this.log.info(&#x22;TOOL&#x22;, &#x22;Using clang++ compiler, because preferClang option is set, and clang++ is available.&#x22;);
+            this.log.info("TOOL", "Using clang++ compiler, because preferClang option is set, and clang++ is available.");
         }
-        this.cppCompilerPath = &#x22;clang++&#x22;;
-        this.cCompilerPath = &#x22;clang&#x22;;
+        this.cppCompilerPath = "clang++";
+        this.cCompilerPath = "clang";
     }
-    else if (this.options.preferGnu &#x26;&#x26; environment.isGPPAvailable) {
+    else if (this.options.preferGnu &amp;&amp; environment.isGPPAvailable) {
         if (install) {
-            this.log.info(&#x22;TOOL&#x22;, &#x22;Using g++ compiler, because preferGnu option is set, and g++ is available.&#x22;);
+            this.log.info("TOOL", "Using g++ compiler, because preferGnu option is set, and g++ is available.");
         }
-        this.cppCompilerPath = &#x22;g++&#x22;;
-        this.cCompilerPath = &#x22;gcc&#x22;;
+        this.cppCompilerPath = "g++";
+        this.cCompilerPath = "gcc";
     }
-    // if it&#x27;s already set because of options...
+    // if it's already set because of options...
     if (this.generator) {
         if (install) {
-            this.log.info(&#x22;TOOL&#x22;, &#x22;Using &#x22; + this.options.generator + &#x22; generator, as specified from commandline.&#x22;);
+            this.log.info("TOOL", "Using " + this.options.generator + " generator, as specified from commandline.");
         }
     }
     // 2: Generator
     else if (environment.isOSX) {
         if (this.options.preferXcode) {
             if (install) {
-                this.log.info(&#x22;TOOL&#x22;, &#x22;Using Xcode generator, because preferXcode option is set.&#x22;);
+                this.log.info("TOOL", "Using Xcode generator, because preferXcode option is set.");
             }
-            this.generator = &#x22;Xcode&#x22;;
+            this.generator = "Xcode";
         }
-        else if (this.options.preferMake &#x26;&#x26; environment.isMakeAvailable) {
+        else if (this.options.preferMake &amp;&amp; environment.isMakeAvailable) {
             if (install) {
-                this.log.info(&#x22;TOOL&#x22;, &#x22;Using Unix Makefiles generator, because preferMake option is set, and make is available.&#x22;);
+                this.log.info("TOOL", "Using Unix Makefiles generator, because preferMake option is set, and make is available.");
             }
-            this.generator = &#x22;Unix Makefiles&#x22;;
+            this.generator = "Unix Makefiles";
         }
         else if (environment.isNinjaAvailable) {
             if (install) {
-                this.log.info(&#x22;TOOL&#x22;, &#x22;Using Ninja generator, because ninja is available.&#x22;);
+                this.log.info("TOOL", "Using Ninja generator, because ninja is available.");
             }
-            this.generator = &#x22;Ninja&#x22;;
+            this.generator = "Ninja";
         }
         else {
             if (install) {
-                this.log.info(&#x22;TOOL&#x22;, &#x22;Using Unix Makefiles generator.&#x22;);
+                this.log.info("TOOL", "Using Unix Makefiles generator.");
             }
-            this.generator = &#x22;Unix Makefiles&#x22;;
+            this.generator = "Unix Makefiles";
         }
     }
     else {
-        if (this.options.preferMake &#x26;&#x26; environment.isMakeAvailable) {
+        if (this.options.preferMake &amp;&amp; environment.isMakeAvailable) {
             if (install) {
-                this.log.info(&#x22;TOOL&#x22;, &#x22;Using Unix Makefiles generator, because preferMake option is set, and make is available.&#x22;);
+                this.log.info("TOOL", "Using Unix Makefiles generator, because preferMake option is set, and make is available.");
             }
-            this.generator = &#x22;Unix Makefiles&#x22;;
+            this.generator = "Unix Makefiles";
         }
         else if (environment.isNinjaAvailable) {
             if (install) {
-                this.log.info(&#x22;TOOL&#x22;, &#x22;Using Ninja generator, because ninja is available.&#x22;);
+                this.log.info("TOOL", "Using Ninja generator, because ninja is available.");
             }
-            this.generator = &#x22;Ninja&#x22;;
+            this.generator = "Ninja";
         }
         else {
             if (install) {
-                this.log.info(&#x22;TOOL&#x22;, &#x22;Using Unix Makefiles generator.&#x22;);
+                this.log.info("TOOL", "Using Unix Makefiles generator.");
             }
-            this.generator = &#x22;Unix Makefiles&#x22;;
+            this.generator = "Unix Makefiles";
         }
     }
 
@@ -2942,15 +2935,15 @@
 
     if (environment.isOSX) {
         if (install) {
-            this.log.verbose(&#x22;TOOL&#x22;, &#x22;Setting default OSX compiler flags.&#x22;);
+            this.log.verbose("TOOL", "Setting default OSX compiler flags.");
         }
 
-        this.compilerFlags.push(&#x22;-D_DARWIN_USE_64_BIT_INODE=1&#x22;);
-        this.compilerFlags.push(&#x22;-D_LARGEFILE_SOURCE&#x22;);
-        this.compilerFlags.push(&#x22;-D_FILE_OFFSET_BITS=64&#x22;);
-        this.compilerFlags.push(&#x22;-DBUILDING_NODE_EXTENSION&#x22;);
-        this.compilerFlags.push(&#x22;-w&#x22;);
-        this.linkerFlags.push(&#x22;-undefined dynamic_lookup&#x22;);
+        this.compilerFlags.push("-D_DARWIN_USE_64_BIT_INODE=1");
+        this.compilerFlags.push("-D_LARGEFILE_SOURCE");
+        this.compilerFlags.push("-D_FILE_OFFSET_BITS=64");
+        this.compilerFlags.push("-DBUILDING_NODE_EXTENSION");
+        this.compilerFlags.push("-w");
+        this.linkerFlags.push("-undefined dynamic_lookup");
     }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -3070,16 +3063,16 @@
         let lastPercent = 0;
         request
             .get(url)
-            .on(&#x22;error&#x22;, function (err) {
+            .on("error", function (err) {
                 reject(err);
             })
-            .on(&#x22;response&#x22;, function(data) {
-                length = parseInt(data.headers[&#x22;content-length&#x22;]);
+            .on("response", function(data) {
+                length = parseInt(data.headers["content-length"]);
                 if (!_.isNumber(length)) {
                     length = 0;
                 }
             })
-            .on(&#x22;data&#x22;, function (chunk) {
+            .on("data", function (chunk) {
                 if (shasum) {
                     shasum.update(chunk);
                 }
@@ -3087,20 +3080,20 @@
                     done += chunk.length;
                     let percent = done / length * 100;
                     percent = Math.round(percent / 10) * 10 + 10;
-                    if (percent &#x3e; lastPercent) {
-                        self.log.verbose(&#x22;DWNL&#x22;, &#x22;\t&#x22; + lastPercent + &#x22;%&#x22;);
+                    if (percent &gt; lastPercent) {
+                        self.log.verbose("DWNL", "\t" + lastPercent + "%");
                         lastPercent = percent;
                     }
                 }
             })
             .pipe(stream);
 
-        stream.once(&#x22;error&#x22;, function (err) {
+        stream.once("error", function (err) {
             reject(err);
         });
 
-        stream.once(&#x22;finish&#x22;, function () {
-            resolve(shasum ? shasum.digest(&#x22;hex&#x22;) : undefined);
+        stream.once("finish", function () {
+            resolve(shasum ? shasum.digest("hex") : undefined);
         });
     });
 }</pre></li>
@@ -3137,8 +3130,8 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">downloader.prototype.testSum = function (url, sum, options) {
-    if (options.hash &#x26;&#x26; sum &#x26;&#x26; options.sum &#x26;&#x26; options.sum !== sum) {
-        throw new Error(options.hash.toUpperCase() + &#x22; sum of download &#x27;&#x22; + url + &#x22;&#x27; mismatch!&#x22;);
+    if (options.hash &amp;&amp; sum &amp;&amp; options.sum &amp;&amp; options.sum !== sum) {
+        throw new Error(options.hash.toUpperCase() + " sum of download '" + url + "' mismatch!");
     }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -3177,7 +3170,7 @@
     return new Bluebird(function (resolve, reject) {
         exec(command, function (err, stdout, stderr) {
             if (err) {
-                reject(new Error(err.message + &#x22;\n&#x22; + (stdout || stderr)));
+                reject(new Error(err.message + "\n" + (stdout || stderr)));
             }
             else {
                resolve(stdout);
@@ -3203,21 +3196,21 @@
         let args = splitargs(command);
         let name = args[0];
         args.splice(0, 1);
-        let child = spawn(name, args, {stdio: options.silent ? &#x22;ignore&#x22; : &#x22;inherit&#x22;});
+        let child = spawn(name, args, {stdio: options.silent ? "ignore" : "inherit"});
         let ended = false;
-        child.on(&#x22;error&#x22;, function (e) {
+        child.on("error", function (e) {
             if (!ended) {
                 reject(e);
                 ended = true;
             }
         });
-        child.on(&#x22;exit&#x22;, function (code, signal) {
+        child.on("exit", function (code, signal) {
             if (!ended) {
                 if (code === 0) {
                     resolve();
                 }
                 else {
-                    reject(new Error(&#x22;Process terminated: &#x22; + code || signal));
+                    reject(new Error("Process terminated: " + code || signal));
                 }
                 ended = true;
             }
@@ -3264,16 +3257,16 @@
     let appConfig = appCMakeJSConfig(this.options.directory, this.log);
     if (_.isPlainObject(appConfig)) {
         if (_.keys(appConfig).length) {
-            this.log.verbose(&#x22;CFG&#x22;, &#x22;Applying CMake.js config from root package.json:&#x22;);
-            this.log.verbose(&#x22;CFG&#x22;, JSON.stringify(appConfig));
-            // Applying applications&#x27;s config, if there is no explicit runtime related options specified
+            this.log.verbose("CFG", "Applying CMake.js config from root package.json:");
+            this.log.verbose("CFG", JSON.stringify(appConfig));
+            // Applying applications's config, if there is no explicit runtime related options specified
             this.options.runtime = this.options.runtime || appConfig.runtime;
             this.options.runtimeVersion = this.options.runtimeVersion || appConfig.runtimeVersion;
             this.options.arch = this.options.arch || appConfig.arch;
         }
     }
-    this.log.verbose(&#x22;CFG&#x22;, &#x22;Build system options:&#x22;);
-    this.log.verbose(&#x22;CFG&#x22;, JSON.stringify(this.options));
+    this.log.verbose("CFG", "Build system options:");
+    this.log.verbose("CFG", JSON.stringify(this.options));
     this.cmake = new CMake(this.options);
     this.dist = new Dist(this.options);
     this.toolset = new Toolset(this.options);
@@ -3336,11 +3329,11 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_showError = function (e) {
-    if (this.log.level === &#x22;verbose&#x22; || this.log.level === &#x22;silly&#x22;) {
-        this.log.error(&#x22;OMG&#x22;, e.stack);
+    if (this.log.level === "verbose" || this.log.level === "silly") {
+        this.log.error("OMG", e.stack);
     }
     else {
-        this.log.error(&#x22;OMG&#x22;, e.message);
+        this.log.error("OMG", e.message);
     }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -3356,7 +3349,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">build = function () {
-    return this._invokeCMake(&#x22;build&#x22;);
+    return this._invokeCMake("build");
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3371,7 +3364,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">clean = function () {
-    return this._invokeCMake(&#x22;clean&#x22;);
+    return this._invokeCMake("clean");
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3386,7 +3379,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">compile = function () {
-    return this._invokeCMake(&#x22;compile&#x22;);
+    return this._invokeCMake("compile");
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3401,7 +3394,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">configure = function () {
-    return this._invokeCMake(&#x22;configure&#x22;);
+    return this._invokeCMake("configure");
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3416,7 +3409,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getBuildCommand = function () {
-    return this._invokeCMake(&#x22;getBuildCommand&#x22;);
+    return this._invokeCMake("getBuildCommand");
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3431,7 +3424,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getCleanCommand = function () {
-    return this._invokeCMake(&#x22;getCleanCommand&#x22;);
+    return this._invokeCMake("getCleanCommand");
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3446,7 +3439,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getConfigureCommand = function () {
-    return this._invokeCMake(&#x22;getConfigureCommand&#x22;);
+    return this._invokeCMake("getConfigureCommand");
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3476,7 +3469,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">rebuild = function () {
-    return this._invokeCMake(&#x22;rebuild&#x22;);
+    return this._invokeCMake("rebuild");
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3491,7 +3484,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">reconfigure = function () {
-    return this._invokeCMake(&#x22;reconfigure&#x22;);
+    return this._invokeCMake("reconfigure");
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3561,11 +3554,11 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_showError = function (e) {
-    if (this.log.level === &#x22;verbose&#x22; || this.log.level === &#x22;silly&#x22;) {
-        this.log.error(&#x22;OMG&#x22;, e.stack);
+    if (this.log.level === "verbose" || this.log.level === "silly") {
+        this.log.error("OMG", e.stack);
     }
     else {
-        this.log.error(&#x22;OMG&#x22;, e.message);
+        this.log.error("OMG", e.message);
     }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -3586,7 +3579,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">build = function () {
-    return this._invokeCMake(&#x22;build&#x22;);
+    return this._invokeCMake("build");
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3606,7 +3599,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">clean = function () {
-    return this._invokeCMake(&#x22;clean&#x22;);
+    return this._invokeCMake("clean");
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3626,7 +3619,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">compile = function () {
-    return this._invokeCMake(&#x22;compile&#x22;);
+    return this._invokeCMake("compile");
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3646,7 +3639,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">configure = function () {
-    return this._invokeCMake(&#x22;configure&#x22;);
+    return this._invokeCMake("configure");
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3666,7 +3659,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getBuildCommand = function () {
-    return this._invokeCMake(&#x22;getBuildCommand&#x22;);
+    return this._invokeCMake("getBuildCommand");
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3686,7 +3679,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getCleanCommand = function () {
-    return this._invokeCMake(&#x22;getCleanCommand&#x22;);
+    return this._invokeCMake("getCleanCommand");
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3706,7 +3699,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getConfigureCommand = function () {
-    return this._invokeCMake(&#x22;getConfigureCommand&#x22;);
+    return this._invokeCMake("getConfigureCommand");
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3746,7 +3739,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">rebuild = function () {
-    return this._invokeCMake(&#x22;rebuild&#x22;);
+    return this._invokeCMake("rebuild");
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3766,7 +3759,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">reconfigure = function () {
-    return this._invokeCMake(&#x22;reconfigure&#x22;);
+    return this._invokeCMake("reconfigure");
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3787,7 +3780,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function CMLog(options) {
     this.options = options || {};
-    this.debug = require(&#x22;debug&#x22;)(this.options.logName || &#x22;cmake-js&#x22;);
+    this.debug = require("debug")(this.options.logName || "cmake-js");
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3808,7 +3801,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">error = function (cat, msg) {
     if (this.options.noLog) {
-        this.debug(cat + &#x22;: &#x22; + msg);
+        this.debug(cat + ": " + msg);
     }
     else {
         log.error(cat, msg);
@@ -3828,7 +3821,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">http = function (cat, msg) {
     if (this.options.noLog) {
-        this.debug(cat + &#x22;: &#x22; + msg);
+        this.debug(cat + ": " + msg);
     }
     else {
         log.http(cat, msg);
@@ -3848,7 +3841,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">info = function (cat, msg) {
     if (this.options.noLog) {
-        this.debug(cat + &#x22;: &#x22; + msg);
+        this.debug(cat + ": " + msg);
     }
     else {
         log.info(cat, msg);
@@ -3868,7 +3861,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">silly = function (cat, msg) {
     if (this.options.noLog) {
-        this.debug(cat + &#x22;: &#x22; + msg);
+        this.debug(cat + ": " + msg);
     }
     else {
         log.silly(cat, msg);
@@ -3888,7 +3881,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">verbose = function (cat, msg) {
     if (this.options.noLog) {
-        this.debug(cat + &#x22;: &#x22; + msg);
+        this.debug(cat + ": " + msg);
     }
     else {
         log.verbose(cat, msg);
@@ -3908,7 +3901,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">warn = function (cat, msg) {
     if (this.options.noLog) {
-        this.debug(cat + &#x22;: &#x22; + msg);
+        this.debug(cat + ": " + msg);
     }
     else {
         log.warn(cat, msg);
@@ -3933,7 +3926,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">error = function (cat, msg) {
     if (this.options.noLog) {
-        this.debug(cat + &#x22;: &#x22; + msg);
+        this.debug(cat + ": " + msg);
     }
     else {
         log.error(cat, msg);
@@ -3958,7 +3951,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">http = function (cat, msg) {
     if (this.options.noLog) {
-        this.debug(cat + &#x22;: &#x22; + msg);
+        this.debug(cat + ": " + msg);
     }
     else {
         log.http(cat, msg);
@@ -3983,7 +3976,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">info = function (cat, msg) {
     if (this.options.noLog) {
-        this.debug(cat + &#x22;: &#x22; + msg);
+        this.debug(cat + ": " + msg);
     }
     else {
         log.info(cat, msg);
@@ -4008,7 +4001,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">silly = function (cat, msg) {
     if (this.options.noLog) {
-        this.debug(cat + &#x22;: &#x22; + msg);
+        this.debug(cat + ": " + msg);
     }
     else {
         log.silly(cat, msg);
@@ -4033,7 +4026,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">verbose = function (cat, msg) {
     if (this.options.noLog) {
-        this.debug(cat + &#x22;: &#x22; + msg);
+        this.debug(cat + ": " + msg);
     }
     else {
         log.verbose(cat, msg);
@@ -4058,7 +4051,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">warn = function (cat, msg) {
     if (this.options.noLog) {
-        this.debug(cat + &#x22;: &#x22; + msg);
+        this.debug(cat + ": " + msg);
     }
     else {
         log.warn(cat, msg);
@@ -4086,8 +4079,8 @@
     this.log = new CMLog(this.options);
     this.dist = new Dist(this.options);
     this.projectRoot = path.resolve(this.options.directory || process.cwd());
-    this.workDir = this.options.out || path.join(this.projectRoot, &#x22;build&#x22;);
-    this.config = this.options.debug ? &#x22;Debug&#x22; : &#x22;Release&#x22;;
+    this.workDir = this.options.out || path.join(this.projectRoot, "build");
+    this.config = this.options.debug ? "Debug" : "Release";
     this.buildDir = path.join(this.workDir, this.config);
     this._isAvailable = null;
     this.targetOptions = new TargetOptions(this.options);
@@ -4135,7 +4128,7 @@
             return !stat.isDirectory();
         }
         else {
-            which.sync(&#x22;cmake&#x22;);
+            which.sync("cmake");
             return true;
         }
     }
@@ -4194,7 +4187,7 @@
             return !stat.isDirectory();
         }
         else {
-            which.sync(&#x22;cmake&#x22;);
+            which.sync("cmake");
             return true;
         }
     }
@@ -4221,7 +4214,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_run = function (command) {
-    this.log.info(&#x22;RUN&#x22;, command);
+    this.log.info("RUN", command);
     return processHelpers.run(command, {silent: this.silent});
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -4259,7 +4252,7 @@
     <li>description and source-code<pre class="apidocCodePre">clean = function () {
     this.verifyIfAvailable();
 
-    this.log.info(&#x22;CMD&#x22;, &#x22;CLEAN&#x22;);
+    this.log.info("CMD", "CLEAN");
     return this._run(this.getCleanCommand());
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -4335,7 +4328,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getBuildCommand = function () {
-    return Bluebird.resolve(this.path + &#x22; --build \&#x22;&#x22; + this.workDir + &#x22;\&#x22; --config &#x22; + this.config);
+    return Bluebird.resolve(this.path + " --build \"" + this.workDir + "\" --config " + this.config);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -4350,7 +4343,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getCleanCommand = function () {
-    return this.path + &#x22; -E remove_directory \&#x22;&#x22; + this.workDir + &#x22;\&#x22;&#x22;;
+    return this.path + " -E remove_directory \"" + this.workDir + "\"";
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -4441,8 +4434,8 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">verifyIfAvailable = function () {
     if (!this.isAvailable) {
-        throw new Error(&#x22;CMake executable is not found. Please use your system&#x27;s package manager to install it, or you can get installers
- from there: http://cmake.org.&#x22;);
+        throw new Error("CMake executable is not found. Please use your system's package manager to install it, or you can get installers
+ from there: http://cmake.org.");
     }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -4463,7 +4456,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_run = function (command) {
-    this.log.info(&#x22;RUN&#x22;, command);
+    this.log.info("RUN", command);
     return processHelpers.run(command, {silent: this.silent});
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -4511,7 +4504,7 @@
     <li>description and source-code<pre class="apidocCodePre">clean = function () {
     this.verifyIfAvailable();
 
-    this.log.info(&#x22;CMD&#x22;, &#x22;CLEAN&#x22;);
+    this.log.info("CMD", "CLEAN");
     return this._run(this.getCleanCommand());
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -4607,7 +4600,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getBuildCommand = function () {
-    return Bluebird.resolve(this.path + &#x22; --build \&#x22;&#x22; + this.workDir + &#x22;\&#x22; --config &#x22; + this.config);
+    return Bluebird.resolve(this.path + " --build \"" + this.workDir + "\" --config " + this.config);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -4627,7 +4620,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">getCleanCommand = function () {
-    return this.path + &#x22; -E remove_directory \&#x22;&#x22; + this.workDir + &#x22;\&#x22;&#x22;;
+    return this.path + " -E remove_directory \"" + this.workDir + "\"";
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -4743,8 +4736,8 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">verifyIfAvailable = function () {
     if (!this.isAvailable) {
-        throw new Error(&#x22;CMake executable is not found. Please use your system&#x27;s package manager to install it, or you can get installers
- from there: http://cmake.org.&#x22;);
+        throw new Error("CMake executable is not found. Please use your system's package manager to install it, or you can get installers
+ from there: http://cmake.org.");
     }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -5088,18 +5081,18 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_setupGNUStd = function (install) {
     if (this.options.std) {
-        if (this.options.std !== &#x22;c++98&#x22;) {
+        if (this.options.std !== "c++98") {
             if (install) {
-                this.log.info(&#x22;TOOL&#x22;, `Using ${this.options.std} compiler standard.`);
+                this.log.info("TOOL", `Using ${this.options.std} compiler standard.`);
             }
-            this.compilerFlags.push(&#x22;-std=&#x22; + this.options.std);
+            this.compilerFlags.push("-std=" + this.options.std);
         }
     }
     else {
         if (install) {
-            this.log.info(&#x22;TOOL&#x22;, &#x22;Using c++11 compiler standard.&#x22;);
+            this.log.info("TOOL", "Using c++11 compiler standard.");
         }
-        this.compilerFlags.push(&#x22;-std=c++11&#x22;);
+        this.compilerFlags.push("-std=c++11");
     }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -5136,82 +5129,82 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">initializePosix = function (install) {
     // 1: Compiler
-    if (!environment.isGPPAvailable &#x26;&#x26; !environment.isClangAvailable) {
+    if (!environment.isGPPAvailable &amp;&amp; !environment.isClangAvailable) {
         if (environment.isOSX) {
-            throw new Error(&#x22;C++ Compiler toolset is not available. Install Xcode Commandline Tools from Apple Dev Center, or install
- Clang with homebrew by invoking: &#x27;brew install llvm --with-clang --with-asan&#x27;.&#x22;);
+            throw new Error("C++ Compiler toolset is not available. Install Xcode Commandline Tools from Apple Dev Center, or install
+ Clang with homebrew by invoking: 'brew install llvm --with-clang --with-asan'.");
         }
         else {
-            throw new Error(&#x22;C++ Compiler toolset is not available. Install proper compiler toolset with your package manager, eg
-. &#x27;sudo apt-get install g++&#x27;.&#x22;);
+            throw new Error("C++ Compiler toolset is not available. Install proper compiler toolset with your package manager, eg
+. 'sudo apt-get install g++'.");
         }
     }
 
-    if (this.options.preferClang &#x26;&#x26; environment.isClangAvailable) {
+    if (this.options.preferClang &amp;&amp; environment.isClangAvailable) {
         if (install) {
-            this.log.info(&#x22;TOOL&#x22;, &#x22;Using clang++ compiler, because preferClang option is set, and clang++ is available.&#x22;);
+            this.log.info("TOOL", "Using clang++ compiler, because preferClang option is set, and clang++ is available.");
         }
-        this.cppCompilerPath = &#x22;clang++&#x22;;
-        this.cCompilerPath = &#x22;clang&#x22;;
+        this.cppCompilerPath = "clang++";
+        this.cCompilerPath = "clang";
     }
-    else if (this.options.preferGnu &#x26;&#x26; environment.isGPPAvailable) {
+    else if (this.options.preferGnu &amp;&amp; environment.isGPPAvailable) {
         if (install) {
-            this.log.info(&#x22;TOOL&#x22;, &#x22;Using g++ compiler, because preferGnu option is set, and g++ is available.&#x22;);
+            this.log.info("TOOL", "Using g++ compiler, because preferGnu option is set, and g++ is available.");
         }
-        this.cppCompilerPath = &#x22;g++&#x22;;
-        this.cCompilerPath = &#x22;gcc&#x22;;
+        this.cppCompilerPath = "g++";
+        this.cCompilerPath = "gcc";
     }
-    // if it&#x27;s already set because of options...
+    // if it's already set because of options...
     if (this.generator) {
         if (install) {
-            this.log.info(&#x22;TOOL&#x22;, &#x22;Using &#x22; + this.options.generator + &#x22; generator, as specified from commandline.&#x22;);
+            this.log.info("TOOL", "Using " + this.options.generator + " generator, as specified from commandline.");
         }
     }
     // 2: Generator
     else if (environment.isOSX) {
         if (this.options.preferXcode) {
             if (install) {
-                this.log.info(&#x22;TOOL&#x22;, &#x22;Using Xcode generator, because preferXcode option is set.&#x22;);
+                this.log.info("TOOL", "Using Xcode generator, because preferXcode option is set.");
             }
-            this.generator = &#x22;Xcode&#x22;;
+            this.generator = "Xcode";
         }
-        else if (this.options.preferMake &#x26;&#x26; environment.isMakeAvailable) {
+        else if (this.options.preferMake &amp;&amp; environment.isMakeAvailable) {
             if (install) {
-                this.log.info(&#x22;TOOL&#x22;, &#x22;Using Unix Makefiles generator, because preferMake option is set, and make is available.&#x22;);
+                this.log.info("TOOL", "Using Unix Makefiles generator, because preferMake option is set, and make is available.");
             }
-            this.generator = &#x22;Unix Makefiles&#x22;;
+            this.generator = "Unix Makefiles";
         }
         else if (environment.isNinjaAvailable) {
             if (install) {
-                this.log.info(&#x22;TOOL&#x22;, &#x22;Using Ninja generator, because ninja is available.&#x22;);
+                this.log.info("TOOL", "Using Ninja generator, because ninja is available.");
             }
-            this.generator = &#x22;Ninja&#x22;;
+            this.generator = "Ninja";
         }
         else {
             if (install) {
-                this.log.info(&#x22;TOOL&#x22;, &#x22;Using Unix Makefiles generator.&#x22;);
+                this.log.info("TOOL", "Using Unix Makefiles generator.");
             }
-            this.generator = &#x22;Unix Makefiles&#x22;;
+            this.generator = "Unix Makefiles";
         }
     }
     else {
-        if (this.options.preferMake &#x26;&#x26; environment.isMakeAvailable) {
+        if (this.options.preferMake &amp;&amp; environment.isMakeAvailable) {
             if (install) {
-                this.log.info(&#x22;TOOL&#x22;, &#x22;Using Unix Makefiles generator, because preferMake option is set, and make is available.&#x22;);
+                this.log.info("TOOL", "Using Unix Makefiles generator, because preferMake option is set, and make is available.");
             }
-            this.generator = &#x22;Unix Makefiles&#x22;;
+            this.generator = "Unix Makefiles";
         }
         else if (environment.isNinjaAvailable) {
             if (install) {
-                this.log.info(&#x22;TOOL&#x22;, &#x22;Using Ninja generator, because ninja is available.&#x22;);
+                this.log.info("TOOL", "Using Ninja generator, because ninja is available.");
             }
-            this.generator = &#x22;Ninja&#x22;;
+            this.generator = "Ninja";
         }
         else {
             if (install) {
-                this.log.info(&#x22;TOOL&#x22;, &#x22;Using Unix Makefiles generator.&#x22;);
+                this.log.info("TOOL", "Using Unix Makefiles generator.");
             }
-            this.generator = &#x22;Unix Makefiles&#x22;;
+            this.generator = "Unix Makefiles";
         }
     }
 
@@ -5220,15 +5213,15 @@
 
     if (environment.isOSX) {
         if (install) {
-            this.log.verbose(&#x22;TOOL&#x22;, &#x22;Setting default OSX compiler flags.&#x22;);
+            this.log.verbose("TOOL", "Setting default OSX compiler flags.");
         }
 
-        this.compilerFlags.push(&#x22;-D_DARWIN_USE_64_BIT_INODE=1&#x22;);
-        this.compilerFlags.push(&#x22;-D_LARGEFILE_SOURCE&#x22;);
-        this.compilerFlags.push(&#x22;-D_FILE_OFFSET_BITS=64&#x22;);
-        this.compilerFlags.push(&#x22;-DBUILDING_NODE_EXTENSION&#x22;);
-        this.compilerFlags.push(&#x22;-w&#x22;);
-        this.linkerFlags.push(&#x22;-undefined dynamic_lookup&#x22;);
+        this.compilerFlags.push("-D_DARWIN_USE_64_BIT_INODE=1");
+        this.compilerFlags.push("-D_LARGEFILE_SOURCE");
+        this.compilerFlags.push("-D_FILE_OFFSET_BITS=64");
+        this.compilerFlags.push("-DBUILDING_NODE_EXTENSION");
+        this.compilerFlags.push("-w");
+        this.linkerFlags.push("-undefined dynamic_lookup");
     }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -5295,18 +5288,18 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">_setupGNUStd = function (install) {
     if (this.options.std) {
-        if (this.options.std !== &#x22;c++98&#x22;) {
+        if (this.options.std !== "c++98") {
             if (install) {
-                this.log.info(&#x22;TOOL&#x22;, `Using ${this.options.std} compiler standard.`);
+                this.log.info("TOOL", `Using ${this.options.std} compiler standard.`);
             }
-            this.compilerFlags.push(&#x22;-std=&#x22; + this.options.std);
+            this.compilerFlags.push("-std=" + this.options.std);
         }
     }
     else {
         if (install) {
-            this.log.info(&#x22;TOOL&#x22;, &#x22;Using c++11 compiler standard.&#x22;);
+            this.log.info("TOOL", "Using c++11 compiler standard.");
         }
-        this.compilerFlags.push(&#x22;-std=c++11&#x22;);
+        this.compilerFlags.push("-std=c++11");
     }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -5353,82 +5346,82 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">initializePosix = function (install) {
     // 1: Compiler
-    if (!environment.isGPPAvailable &#x26;&#x26; !environment.isClangAvailable) {
+    if (!environment.isGPPAvailable &amp;&amp; !environment.isClangAvailable) {
         if (environment.isOSX) {
-            throw new Error(&#x22;C++ Compiler toolset is not available. Install Xcode Commandline Tools from Apple Dev Center, or install
- Clang with homebrew by invoking: &#x27;brew install llvm --with-clang --with-asan&#x27;.&#x22;);
+            throw new Error("C++ Compiler toolset is not available. Install Xcode Commandline Tools from Apple Dev Center, or install
+ Clang with homebrew by invoking: 'brew install llvm --with-clang --with-asan'.");
         }
         else {
-            throw new Error(&#x22;C++ Compiler toolset is not available. Install proper compiler toolset with your package manager, eg
-. &#x27;sudo apt-get install g++&#x27;.&#x22;);
+            throw new Error("C++ Compiler toolset is not available. Install proper compiler toolset with your package manager, eg
+. 'sudo apt-get install g++'.");
         }
     }
 
-    if (this.options.preferClang &#x26;&#x26; environment.isClangAvailable) {
+    if (this.options.preferClang &amp;&amp; environment.isClangAvailable) {
         if (install) {
-            this.log.info(&#x22;TOOL&#x22;, &#x22;Using clang++ compiler, because preferClang option is set, and clang++ is available.&#x22;);
+            this.log.info("TOOL", "Using clang++ compiler, because preferClang option is set, and clang++ is available.");
         }
-        this.cppCompilerPath = &#x22;clang++&#x22;;
-        this.cCompilerPath = &#x22;clang&#x22;;
+        this.cppCompilerPath = "clang++";
+        this.cCompilerPath = "clang";
     }
-    else if (this.options.preferGnu &#x26;&#x26; environment.isGPPAvailable) {
+    else if (this.options.preferGnu &amp;&amp; environment.isGPPAvailable) {
         if (install) {
-            this.log.info(&#x22;TOOL&#x22;, &#x22;Using g++ compiler, because preferGnu option is set, and g++ is available.&#x22;);
+            this.log.info("TOOL", "Using g++ compiler, because preferGnu option is set, and g++ is available.");
         }
-        this.cppCompilerPath = &#x22;g++&#x22;;
-        this.cCompilerPath = &#x22;gcc&#x22;;
+        this.cppCompilerPath = "g++";
+        this.cCompilerPath = "gcc";
     }
-    // if it&#x27;s already set because of options...
+    // if it's already set because of options...
     if (this.generator) {
         if (install) {
-            this.log.info(&#x22;TOOL&#x22;, &#x22;Using &#x22; + this.options.generator + &#x22; generator, as specified from commandline.&#x22;);
+            this.log.info("TOOL", "Using " + this.options.generator + " generator, as specified from commandline.");
         }
     }
     // 2: Generator
     else if (environment.isOSX) {
         if (this.options.preferXcode) {
             if (install) {
-                this.log.info(&#x22;TOOL&#x22;, &#x22;Using Xcode generator, because preferXcode option is set.&#x22;);
+                this.log.info("TOOL", "Using Xcode generator, because preferXcode option is set.");
             }
-            this.generator = &#x22;Xcode&#x22;;
+            this.generator = "Xcode";
         }
-        else if (this.options.preferMake &#x26;&#x26; environment.isMakeAvailable) {
+        else if (this.options.preferMake &amp;&amp; environment.isMakeAvailable) {
             if (install) {
-                this.log.info(&#x22;TOOL&#x22;, &#x22;Using Unix Makefiles generator, because preferMake option is set, and make is available.&#x22;);
+                this.log.info("TOOL", "Using Unix Makefiles generator, because preferMake option is set, and make is available.");
             }
-            this.generator = &#x22;Unix Makefiles&#x22;;
+            this.generator = "Unix Makefiles";
         }
         else if (environment.isNinjaAvailable) {
             if (install) {
-                this.log.info(&#x22;TOOL&#x22;, &#x22;Using Ninja generator, because ninja is available.&#x22;);
+                this.log.info("TOOL", "Using Ninja generator, because ninja is available.");
             }
-            this.generator = &#x22;Ninja&#x22;;
+            this.generator = "Ninja";
         }
         else {
             if (install) {
-                this.log.info(&#x22;TOOL&#x22;, &#x22;Using Unix Makefiles generator.&#x22;);
+                this.log.info("TOOL", "Using Unix Makefiles generator.");
             }
-            this.generator = &#x22;Unix Makefiles&#x22;;
+            this.generator = "Unix Makefiles";
         }
     }
     else {
-        if (this.options.preferMake &#x26;&#x26; environment.isMakeAvailable) {
+        if (this.options.preferMake &amp;&amp; environment.isMakeAvailable) {
             if (install) {
-                this.log.info(&#x22;TOOL&#x22;, &#x22;Using Unix Makefiles generator, because preferMake option is set, and make is available.&#x22;);
+                this.log.info("TOOL", "Using Unix Makefiles generator, because preferMake option is set, and make is available.");
             }
-            this.generator = &#x22;Unix Makefiles&#x22;;
+            this.generator = "Unix Makefiles";
         }
         else if (environment.isNinjaAvailable) {
             if (install) {
-                this.log.info(&#x22;TOOL&#x22;, &#x22;Using Ninja generator, because ninja is available.&#x22;);
+                this.log.info("TOOL", "Using Ninja generator, because ninja is available.");
             }
-            this.generator = &#x22;Ninja&#x22;;
+            this.generator = "Ninja";
         }
         else {
             if (install) {
-                this.log.info(&#x22;TOOL&#x22;, &#x22;Using Unix Makefiles generator.&#x22;);
+                this.log.info("TOOL", "Using Unix Makefiles generator.");
             }
-            this.generator = &#x22;Unix Makefiles&#x22;;
+            this.generator = "Unix Makefiles";
         }
     }
 
@@ -5437,15 +5430,15 @@
 
     if (environment.isOSX) {
         if (install) {
-            this.log.verbose(&#x22;TOOL&#x22;, &#x22;Setting default OSX compiler flags.&#x22;);
+            this.log.verbose("TOOL", "Setting default OSX compiler flags.");
         }
 
-        this.compilerFlags.push(&#x22;-D_DARWIN_USE_64_BIT_INODE=1&#x22;);
-        this.compilerFlags.push(&#x22;-D_LARGEFILE_SOURCE&#x22;);
-        this.compilerFlags.push(&#x22;-D_FILE_OFFSET_BITS=64&#x22;);
-        this.compilerFlags.push(&#x22;-DBUILDING_NODE_EXTENSION&#x22;);
-        this.compilerFlags.push(&#x22;-w&#x22;);
-        this.linkerFlags.push(&#x22;-undefined dynamic_lookup&#x22;);
+        this.compilerFlags.push("-D_DARWIN_USE_64_BIT_INODE=1");
+        this.compilerFlags.push("-D_LARGEFILE_SOURCE");
+        this.compilerFlags.push("-D_FILE_OFFSET_BITS=64");
+        this.compilerFlags.push("-DBUILDING_NODE_EXTENSION");
+        this.compilerFlags.push("-w");
+        this.linkerFlags.push("-undefined dynamic_lookup");
     }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -5580,16 +5573,16 @@
         let lastPercent = 0;
         request
             .get(url)
-            .on(&#x22;error&#x22;, function (err) {
+            .on("error", function (err) {
                 reject(err);
             })
-            .on(&#x22;response&#x22;, function(data) {
-                length = parseInt(data.headers[&#x22;content-length&#x22;]);
+            .on("response", function(data) {
+                length = parseInt(data.headers["content-length"]);
                 if (!_.isNumber(length)) {
                     length = 0;
                 }
             })
-            .on(&#x22;data&#x22;, function (chunk) {
+            .on("data", function (chunk) {
                 if (shasum) {
                     shasum.update(chunk);
                 }
@@ -5597,20 +5590,20 @@
                     done += chunk.length;
                     let percent = done / length * 100;
                     percent = Math.round(percent / 10) * 10 + 10;
-                    if (percent &#x3e; lastPercent) {
-                        self.log.verbose(&#x22;DWNL&#x22;, &#x22;\t&#x22; + lastPercent + &#x22;%&#x22;);
+                    if (percent &gt; lastPercent) {
+                        self.log.verbose("DWNL", "\t" + lastPercent + "%");
                         lastPercent = percent;
                     }
                 }
             })
             .pipe(stream);
 
-        stream.once(&#x22;error&#x22;, function (err) {
+        stream.once("error", function (err) {
             reject(err);
         });
 
-        stream.once(&#x22;finish&#x22;, function () {
-            resolve(shasum ? shasum.digest(&#x22;hex&#x22;) : undefined);
+        stream.once("finish", function () {
+            resolve(shasum ? shasum.digest("hex") : undefined);
         });
     });
 }</pre></li>
@@ -5647,8 +5640,8 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">testSum = function (url, sum, options) {
-    if (options.hash &#x26;&#x26; sum &#x26;&#x26; options.sum &#x26;&#x26; options.sum !== sum) {
-        throw new Error(options.hash.toUpperCase() + &#x22; sum of download &#x27;&#x22; + url + &#x22;&#x27; mismatch!&#x22;);
+    if (options.hash &amp;&amp; sum &amp;&amp; options.sum &amp;&amp; options.sum !== sum) {
+        throw new Error(options.hash.toUpperCase() + " sum of download '" + url + "' mismatch!");
     }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -5752,16 +5745,16 @@
         let lastPercent = 0;
         request
             .get(url)
-            .on(&#x22;error&#x22;, function (err) {
+            .on("error", function (err) {
                 reject(err);
             })
-            .on(&#x22;response&#x22;, function(data) {
-                length = parseInt(data.headers[&#x22;content-length&#x22;]);
+            .on("response", function(data) {
+                length = parseInt(data.headers["content-length"]);
                 if (!_.isNumber(length)) {
                     length = 0;
                 }
             })
-            .on(&#x22;data&#x22;, function (chunk) {
+            .on("data", function (chunk) {
                 if (shasum) {
                     shasum.update(chunk);
                 }
@@ -5769,20 +5762,20 @@
                     done += chunk.length;
                     let percent = done / length * 100;
                     percent = Math.round(percent / 10) * 10 + 10;
-                    if (percent &#x3e; lastPercent) {
-                        self.log.verbose(&#x22;DWNL&#x22;, &#x22;\t&#x22; + lastPercent + &#x22;%&#x22;);
+                    if (percent &gt; lastPercent) {
+                        self.log.verbose("DWNL", "\t" + lastPercent + "%");
                         lastPercent = percent;
                     }
                 }
             })
             .pipe(stream);
 
-        stream.once(&#x22;error&#x22;, function (err) {
+        stream.once("error", function (err) {
             reject(err);
         });
 
-        stream.once(&#x22;finish&#x22;, function () {
-            resolve(shasum ? shasum.digest(&#x22;hex&#x22;) : undefined);
+        stream.once("finish", function () {
+            resolve(shasum ? shasum.digest("hex") : undefined);
         });
     });
 }</pre></li>
@@ -5829,8 +5822,8 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">testSum = function (url, sum, options) {
-    if (options.hash &#x26;&#x26; sum &#x26;&#x26; options.sum &#x26;&#x26; options.sum !== sum) {
-        throw new Error(options.hash.toUpperCase() + &#x22; sum of download &#x27;&#x22; + url + &#x22;&#x27; mismatch!&#x22;);
+    if (options.hash &amp;&amp; sum &amp;&amp; options.sum &amp;&amp; options.sum !== sum) {
+        throw new Error(options.hash.toUpperCase() + " sum of download '" + url + "' mismatch!");
     }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -5879,7 +5872,7 @@
     return new Bluebird(function (resolve, reject) {
         exec(command, function (err, stdout, stderr) {
             if (err) {
-                reject(new Error(err.message + &#x22;\n&#x22; + (stdout || stderr)));
+                reject(new Error(err.message + "\n" + (stdout || stderr)));
             }
             else {
                resolve(stdout);
@@ -5905,21 +5898,21 @@
         let args = splitargs(command);
         let name = args[0];
         args.splice(0, 1);
-        let child = spawn(name, args, {stdio: options.silent ? &#x22;ignore&#x22; : &#x22;inherit&#x22;});
+        let child = spawn(name, args, {stdio: options.silent ? "ignore" : "inherit"});
         let ended = false;
-        child.on(&#x22;error&#x22;, function (e) {
+        child.on("error", function (e) {
             if (!ended) {
                 reject(e);
                 ended = true;
             }
         });
-        child.on(&#x22;exit&#x22;, function (code, signal) {
+        child.on("exit", function (code, signal) {
             if (!ended) {
                 if (code === 0) {
                     resolve();
                 }
                 else {
-                    reject(new Error(&#x22;Process terminated: &#x22; + code || signal));
+                    reject(new Error("Process terminated: " + code || signal));
                 }
                 ended = true;
             }
@@ -5947,7 +5940,7 @@
     return new Bluebird(function (resolve, reject) {
         exec(command, function (err, stdout, stderr) {
             if (err) {
-                reject(new Error(err.message + &#x22;\n&#x22; + (stdout || stderr)));
+                reject(new Error(err.message + "\n" + (stdout || stderr)));
             }
             else {
                resolve(stdout);
@@ -5978,21 +5971,21 @@
         let args = splitargs(command);
         let name = args[0];
         args.splice(0, 1);
-        let child = spawn(name, args, {stdio: options.silent ? &#x22;ignore&#x22; : &#x22;inherit&#x22;});
+        let child = spawn(name, args, {stdio: options.silent ? "ignore" : "inherit"});
         let ended = false;
-        child.on(&#x22;error&#x22;, function (e) {
+        child.on("error", function (e) {
             if (!ended) {
                 reject(e);
                 ended = true;
             }
         });
-        child.on(&#x22;exit&#x22;, function (code, signal) {
+        child.on("exit", function (code, signal) {
             if (!ended) {
                 if (code === 0) {
                     resolve();
                 }
                 else {
-                    reject(new Error(&#x22;Process terminated: &#x22; + code || signal));
+                    reject(new Error("Process terminated: " + code || signal));
                 }
                 ended = true;
             }
@@ -6011,3 +6004,4 @@
     ]
 </div>
 </div>
+</body></html>
