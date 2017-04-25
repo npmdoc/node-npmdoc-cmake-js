@@ -1,6 +1,6 @@
 # npmdoc-cmake-js
 
-#### api documentation for  [cmake-js (v3.4.1)](https://github.com/unbornchikken/cmake-js#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-cmake-js.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-cmake-js) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-cmake-js.svg)](https://travis-ci.org/npmdoc/node-npmdoc-cmake-js)
+#### basic api documentation for  [cmake-js (v3.4.1)](https://github.com/unbornchikken/cmake-js#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-cmake-js.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-cmake-js) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-cmake-js.svg)](https://travis-ci.org/npmdoc/node-npmdoc-cmake-js)
 
 #### CMake.js - a Node.js/io.js native addon build tool
 
